@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ZUMOAPPNAME.StartPage">
+    <StackLayout>
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="entusername" Placeholder = "Username" FontFamily = "NanumGothic.ttf#NanumGothic" HeightRequest="50"
+                        VerticalOptions="CenterAndExpand" PlaceholderColor="White" TextColor="White"
+                        Text="SKD" Grid.Row="1" Grid.Column ="1"  Grid.ColumnSpan="3"/>
+            <Entry x:Name="entpassword" Placeholder = "Password" FontFamily = "NanumGothic.ttf#NanumGothic" HeightRequest="50"
+                        VerticalOptions="CenterAndExpand" PlaceholderColor="White" TextColor="White"
+                        Text="1234" Grid.Row="2" Grid.Column ="1"  Grid.ColumnSpan="3"/>
+            <ActivityIndicator x:Name="ind" IsEnabled="False" IsVisible="False" IsRunning="False" Color="#2196F3"
+                               Grid.Row="3" Grid.Column ="2"/>
+            <Button x:Name="lblLogin" Text="Login" FontFamily="NanumGothic.ttf#NanumGothic" TextColor="White" 
+                       HeightRequest="40" VerticalOptions="CenterAndExpand" BackgroundColor="Silver" Clicked="Login"
+                       Grid.Row="4" Grid.Column ="0" Grid.RowSpan="1" Grid.ColumnSpan="5"/>
+            <Image Source="LoginLogo.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"
+                   Grid.Row="5" Grid.Column ="2"/>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,9 @@
+resources;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\1\jl\res\values\strings.xml
+resources;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\2\jl\res\values\strings.xml
+set;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\1\jl\res\anim\slide_in_right.xml
+set;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\1\jl\res\anim\slide_out_left.xml
+string;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\1\jl\res\values\strings.xml
+string;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\2\jl\res\values\strings.xml
+translate;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\1\jl\res\anim\slide_in_right.xml
+translate;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\1\jl\res\anim\slide_out_left.xml
+WebView;C:\Users\qkrtj\Desktop\xamarin.forms\Droid\obj\Release\81\lp\1\jl\res\layout\activity_webview.xml

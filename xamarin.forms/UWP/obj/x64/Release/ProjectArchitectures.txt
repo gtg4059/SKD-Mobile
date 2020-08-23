@@ -1,0 +1,1 @@
+C:\Users\qkrtj\Desktop\new\xamarin.forms\UWP\ZUMOAPPNAME.UWP.csproj;x64

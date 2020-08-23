@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ZUMOAPPNAME.TabbedPage1">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="전체 현황" >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Text="Gate" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="IN" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="OUT" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="상주인원" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="3"/>
+            <Label Text="총계" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="" x:Name="Allin" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="" x:Name="Allout" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="2"/>
+            <Label Text="" x:Name="Manleft" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="3"/>
+
+            <ListView x:Name="WholeList"
+				IsPullToRefreshEnabled="True" Refreshing="Reset"
+				Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="4">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem  Text="Complete" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding WhGate}"  Grid.Column="0"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding WhIn}"  Grid.Column="1"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding WhOut}"  Grid.Column="2"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding Whleft}"  Grid.Column="3"
+                                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+
+    </ContentPage>
+
+    <ContentPage Title="공종별 현황" >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Text="공종" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="IN" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="OUT" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="계" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="3"/>
+            <Label Text="총계" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="" x:Name="Workin" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="" x:Name="Workout" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="2"/>
+            <Label Text="" x:Name="Workleft" TextColor="Black" BackgroundColor="Silver" FontFamily="NanumGothic.ttf#NanumGothic"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="3"/>
+
+            <ListView x:Name="Workerlist"
+				IsPullToRefreshEnabled="True" Refreshing="Reset"
+				Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="4">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem  Text="Complete" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding WGate}"  Grid.Column="0" 
+                                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding WIn}"  Grid.Column="1"
+                                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding WOut}"  Grid.Column="2"
+                                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding Wleft}"  Grid.Column="3"
+                                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+    </ContentPage>
+</TabbedPage>
